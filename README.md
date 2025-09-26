@@ -1,31 +1,31 @@
+📌 Kelola Tugas
 
-```markdown
-# 📌 Kelola Tugas
+Aplikasi sederhana berbasis CodeIgniter 4 untuk mengelola daftar tugas (CRUD: Create, Read, Update, Delete).
 
-Aplikasi sederhana berbasis **CodeIgniter 4** untuk mengelola daftar tugas (CRUD: Create, Read, Update, Delete).  
 Proyek ini dibuat untuk latihan/pembelajaran framework PHP modern.
+🚀 Fitur
 
----
+    Tambah tugas baru dengan judul, deskripsi, deadline, dan status.
 
-## 🚀 Fitur
-- Tambah tugas baru dengan judul, deskripsi, deadline, dan status.
-- Lihat daftar semua tugas.
-- Edit tugas yang sudah ada.
-- Hapus tugas.
-- Status tugas: `pending`, `progress`, `done`.
+    Lihat daftar semua tugas.
 
----
+    Edit tugas yang sudah ada.
 
-## 🛠️ Teknologi
-- PHP 8.4
-- CodeIgniter 4.6.x
-- MySQL/MariaDB
-- Bootstrap 5 (opsional untuk tampilan lebih rapi)
+    Hapus tugas.
 
----
+    Status tugas: pending, progress, done.
 
-## 📂 Struktur Project
-```
+🛠️ Teknologi
+
+    PHP 8.4
+
+    CodeIgniter 4.6.x
+
+    MySQL/MariaDB
+
+    Tailwind CSS (Digunakan di mockup) / Bootstrap 5 (opsional untuk tampilan lebih rapi)
+
+📂 Struktur Project
 
 kelola-tugas/
 ├── app/
@@ -40,29 +40,48 @@ kelola-tugas/
 ├── .env
 └── README.md
 
-````
+🖼️ Pratinjau Antarmuka
 
----
+Antarmuka utama (halaman /tasks) didesain agar bersih dan berfokus pada fungsionalitas CRUD.
 
-## ⚙️ Setup
+Elemen Kunci
+	
 
-### 1. Clone project
-```bash
-git clone https://github.com/username/kelola-tugas.git
+Deskripsi Visual
+
+Daftar Tugas
+	
+
+Tampilan kartu (card) atau baris memanjang untuk setiap tugas, menampilkan Judul tebal, batas waktu, dan deskripsi singkat.
+
+Aksi Cepat
+	
+
+Di setiap kartu terdapat tombol "Edit" (warna biru) dan "Hapus" (warna merah) untuk aksi langsung.
+
+Status Badge
+	
+
+Status tugas (pending, progress, done) ditampilkan menggunakan lencana berwarna (Merah, Biru, Hijau) yang mudah dibedakan.
+
+Tombol Tambah
+	
+
+Tombol utama "Tambah Tugas Baru" ditempatkan menonjol di bagian atas daftar untuk akses cepat.
+⚙️ Setup
+1. Clone project
+
+git clone [https://github.com/username/kelola-tugas.git](https://github.com/username/kelola-tugas.git)
 cd kelola-tugas
-````
 
-### 2. Install dependencies
+2. Install dependencies
 
-```bash
 composer install
-```
 
-### 3. Buat database
+3. Buat database
 
 Login ke MySQL/MariaDB:
 
-```sql
 CREATE DATABASE kelola_tugas_db;
 USE kelola_tugas_db;
 
@@ -74,13 +93,11 @@ CREATE TABLE tasks (
     status ENUM('pending', 'progress', 'done') DEFAULT 'pending',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-```
 
-### 4. Konfigurasi database
+4. Konfigurasi database
 
-Edit file `.env`:
+Edit file .env:
 
-```ini
 CI_ENVIRONMENT = development
 
 database.default.hostname = 127.0.0.1
@@ -88,38 +105,27 @@ database.default.database = kelola_tugas_db
 database.default.username = root
 database.default.password =
 database.default.DBDriver = MySQLi
-```
 
-### 5. Jalankan server
+5. Jalankan server
 
-```bash
 php spark serve
-```
 
 Secara default jalan di:
-👉 [http://localhost:8080](http://localhost:8080)
+👉 http://localhost:8080
 Kalau port bentrok, bisa pakai:
 
-```bash
 php -S 127.0.0.1:9000 -t public
-```
 
----
+🖥️ Cara Pakai
 
-## 🖥️ Cara Pakai
+    Buka /tasks → lihat daftar tugas.
 
-* Buka `/tasks` → lihat daftar tugas.
-* Klik **Tambah Tugas** untuk menambahkan.
-* Klik **Edit** untuk mengubah tugas.
-* Klik **Hapus** untuk menghapus tugas.
+    Klik Tambah Tugas untuk menambahkan.
 
----
+    Klik Edit untuk mengubah tugas.
 
-## 📜 Lisensi
+    Klik Hapus untuk menghapus tugas.
+
+📜 Lisensi
 
 MIT License – bebas digunakan untuk belajar atau dikembangkan lebih lanjut.
-
-```
-
----
-
